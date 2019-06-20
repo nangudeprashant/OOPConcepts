@@ -20,4 +20,19 @@ class CurrentAccount extends Account {
 				+ "]";
 	}
 
+	@Override
+	public void depositAmount() {
+		System.out.println("This is implementation of depositAmount menthod in CurrentAccount class."
+				+ "\nBussiness logic goes here.");
+		return;
+	}
+
+	@Override
+	public void withdrawAmount() {
+		System.out.println("This is implementation of withdrawAmount menthod in CurrentAccount class."
+				+ "\nBussiness logic goes here.");
+		
+		return;
+	}
+
 }

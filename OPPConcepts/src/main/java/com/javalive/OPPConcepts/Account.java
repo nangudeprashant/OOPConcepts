@@ -1,14 +1,17 @@
 package com.javalive.OPPConcepts;
 
 import java.util.Date;
-
-class Account {
+//This is the example of abstraction where class is declaring methods without body.
+// Abstraction is also achieved with the help of interface in Java which is a solution for multiple inheritance.
+abstract class Account {
     private int accountNumber;
 	private String accountType;
     private Date dateOfOpening;
     private Date dateOfCloseing;
-    private String ActiveStatus;
-    
+    private String activeStatus;
+    private float rateOfInterest;
+    public abstract void depositAmount();  //Abstract method.
+    public abstract void withdrawAmount(); //Abstract method.
 	public int getAccountNumber() {
 		return accountNumber;
 	}
@@ -34,14 +37,20 @@ class Account {
 		this.dateOfCloseing = dateOfCloseing;
 	}
 	public String getActiveStatus() {
-		return ActiveStatus;
+		return activeStatus;
 	}
 	public void setActiveStatus(String activeStatus) {
-		ActiveStatus = activeStatus;
+		this.activeStatus = activeStatus;
+	}
+	public float getRateOfInterest() {
+		return rateOfInterest;
+	}
+	public void setRateOfInterest(float rateOfInterest) {
+		this.rateOfInterest = rateOfInterest;
 	}
 	@Override
 	public String toString() {
 		return "Account [accountNumber=" + accountNumber + ", accountType=" + accountType + ", dateOfOpening="
-				+ dateOfOpening + ", dateOfCloseing=" + dateOfCloseing + ", ActiveStatus=" + ActiveStatus + "]";
+				+ dateOfOpening + ", dateOfCloseing=" + dateOfCloseing + ", ActiveStatus=" + activeStatus + "]";
 	}   
 }

@@ -1,17 +1,7 @@
 package com.javalive.OPPConcepts;
 
 class SavingAccount extends Account {
-	private float rateOfInterest;
 	private int lockerId;
-
-	public float getRateOfInterest() {
-		return rateOfInterest;
-	}
-
-	public void setRateOfInterest(float rateOfInterest) {
-		this.rateOfInterest = rateOfInterest;
-	}
-
 	public int getLockerId() {
 		return lockerId;
 	}
@@ -22,7 +12,21 @@ class SavingAccount extends Account {
 
 	@Override
 	public String toString() {
-		return "SavingAccount [rateOfInterest=" + rateOfInterest + ", lockerId=" + lockerId + "]";
+		return "SavingAccount lockerId=" + lockerId + "]";
+	}
+
+	@Override
+	public void depositAmount() {
+		System.out.println("This is implementation of depositAmount menthod in SavingAccount class."
+				+ "\nBussiness logic goes here.");
+		return;
+	}
+
+	@Override
+	public void withdrawAmount() {
+		System.out.println("This is implementation of withdrawAmount menthod in SavingAccount class."
+				+ "\nBussiness logic goes here.");
+		return;
 	}
 
 }
